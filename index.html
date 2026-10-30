@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>無料体験フォーム改修案</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
 <style>
 /*!
 Theme Name: sun-smile-iwade
@@ -4547,6 +4547,23 @@ section.widget:last-of-type {
 	background: #fff;
 	color: var(--text-color);
 }
+.contact_form .radio_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .75em 1.5em;
+}
+.contact_form .radio_list label {
+	display: inline-flex;
+	align-items: center;
+	gap: .4em;
+	cursor: pointer;
+}
+.contact_form .radio_list input[type="radio"] {
+	width: 1.1em;
+	height: 1.1em;
+	margin: 0;
+	accent-color: var(--blue);
+}
 .contact_form input::placeholder,
 .contact_form textarea::placeholder {
 	color: rgba(71, 48, 20, .4);
@@ -4564,14 +4581,10 @@ section.widget:last-of-type {
 	.fd-up, .top_title, .title_em { opacity: 1; transform: none; }
 	body { margin: 0; background: #fff; }
 	.mock_label { margin: 0; padding: .6em 1em; background: var(--text-color); color: #fff; font-size: .8125rem; letter-spacing: .1em; text-align: center; }
-
 html, body { background: #fff; color: #473014; }
-body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif; }
 </style>
 </head>
 <body>
-
-
 <p class="mock_label">改修案（モック）｜無料体験ページ下部のフォーム部分 ※確認用のため送信はできません</p>
 <main id="primary" class="site-main" style="padding-top: 60px;">
 	<section id="inquiryForm" class="inquiry_form pd">
@@ -4606,7 +4619,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 					<td>
 						<select name="your-age">
 							<option value="">選択してください</option>
-							<optgroup label="こども">
+							<option disabled>【こども】</option>
 								<option>3歳</option>
 								<option>4歳</option>
 								<option>5歳</option>
@@ -4619,8 +4632,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>小学6年生</option>
 								<option>中学生</option>
 								<option>高校生</option>
-							</optgroup>
-							<optgroup label="おとな">
+							<option disabled>【おとな】</option>
 								<option>高校卒業〜20代</option>
 								<option>30代</option>
 								<option>40代</option>
@@ -4628,7 +4640,6 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>60代</option>
 								<option>70代</option>
 								<option>80代以上</option>
-							</optgroup>
 						</select>
 						<span class="note">お子さまは<wbr>年齢または学年を<wbr>お選びください。</span>
 					</td>
@@ -4639,7 +4650,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 						<select name="your-lesson">
 							<option value="">選択してください</option>
 							<option>特になし・相談して決めたい</option>
-							<optgroup label="おとなの教室">
+							<option disabled>【おとなの教室】</option>
 								<option>リラックスアロマヨガ</option>
 								<option>かんたんエアロビクス</option>
 								<option>ボディデザインエクササイズ</option>
@@ -4651,8 +4662,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>ベリーダンス</option>
 								<option>ピラティス</option>
 								<option>らくらくピアノ</option>
-							</optgroup>
-							<optgroup label="こどもの教室">
+							<option disabled>【こどもの教室】</option>
 								<option>ジャズヒップホップダンス</option>
 								<option>キッズテニス</option>
 								<option>ジュニアレスリング</option>
@@ -4664,7 +4674,6 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>キッズミュージカル</option>
 								<option>児童英会話</option>
 								<option>幼児英会話</option>
-							</optgroup>
 						</select>
 						<span class="note">迷っている方は<wbr>「特になし・<wbr>相談して決めたい」を<wbr>お選びください。</span>
 					</td>
@@ -4692,10 +4701,8 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 		</div>
 	</section>
 </main>
-
 <script>
 document.querySelector('form').addEventListener('submit', function (e) { e.preventDefault(); });
 </script>
-
 </body>
 </html>
