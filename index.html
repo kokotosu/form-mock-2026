@@ -4508,6 +4508,12 @@ section.widget:last-of-type {
 	margin: 0;
 	text-align: center;
 }
+/* 文節の途中で改行しない（<wbr> の位置でのみ折り返す） */
+.form_lead p,
+.contact_form .note {
+	word-break: keep-all;
+	overflow-wrap: anywhere;
+}
 .form_lead .sub {
 	color: rgba(71, 48, 20, .7);
 	font-size: .8125em;
@@ -4573,10 +4579,10 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 			<p class="title_em ct"><strong>無料体験随時募集しています！</strong></p>
 			<h2 class="top_title ct">無料体験のお申し込み</h2>
 			<div class="form_lead fd-up">
-				<p>お子さまの体験をお申し込みの場合は、お子さまのお名前・年齢をご記入ください。</p>
-				<p class="sub">メールアドレス・電話番号は保護者の方の連絡先をお願いします</p>
-				<p class="reply">無料体験の日程は3営業日以内にご連絡いたします</p>
-				<p class="refuse">※営業・勧誘のお電話・メールは固くお断りいたします。</p>
+				<p>お子さまの体験を<wbr>お申し込みの場合は、<wbr>お子さまの<wbr>お名前・年齢を<wbr>ご記入ください。</p>
+				<p class="sub">メールアドレス・<wbr>電話番号は<wbr>保護者の方の<wbr>連絡先を<wbr>お願いします</p>
+				<p class="reply">無料体験の日程は<wbr>3営業日以内に<wbr>ご連絡いたします</p>
+				<p class="refuse">※営業・勧誘の<wbr>お電話・メールは<wbr>固く<wbr>お断りいたします。</p>
 			</div>
 			<form action="#">
 			<table class="contact_form">
@@ -4592,7 +4598,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 					<th>保護者のお名前</th>
 					<td>
 						<input type="text" name="your-parent" placeholder="例）岩出 太郎">
-						<span class="note">お子さまのお申し込みの場合にご記入ください。</span>
+						<span class="note">お子さまの<wbr>お申し込みの場合に<wbr>ご記入ください。</span>
 					</td>
 				</tr>
 				<tr class="fd-up">
@@ -4624,7 +4630,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>80代以上</option>
 							</optgroup>
 						</select>
-						<span class="note">お子さまは年齢または学年をお選びください。</span>
+						<span class="note">お子さまは<wbr>年齢または学年を<wbr>お選びください。</span>
 					</td>
 				</tr>
 				<tr class="fd-up">
@@ -4660,7 +4666,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 								<option>幼児英会話</option>
 							</optgroup>
 						</select>
-						<span class="note">迷っている方は「特になし・相談して決めたい」をお選びください。</span>
+						<span class="note">迷っている方は<wbr>「特になし・<wbr>相談して決めたい」を<wbr>お選びください。</span>
 					</td>
 				</tr>
 				<tr class="fd-up">
@@ -4671,7 +4677,7 @@ body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic",
 					<th>電話番号<small class="req">必須</small></th>
 					<td>
 						<input type="tel" name="your-tel" placeholder="例）0736-60-4312">
-						<span class="note">ハイフンのあり・なし、どちらでもご入力いただけます。</span>
+						<span class="note">ハイフンのあり・なし、<wbr>どちらでも<wbr>ご入力いただけます。</span>
 					</td>
 				</tr>
 				<tr class="fd-up">
